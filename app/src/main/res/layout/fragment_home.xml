@@ -5,31 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
-    <Button
+    <ImageButton
         android:id="@+id/btn_easy"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:drawableBottom="@drawable/easy"
+        android:src="@drawable/easy"
         app:layout_constraintBottom_toTopOf="@+id/btn_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_regular"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:drawableBottom="@drawable/medio"
+        android:src="@drawable/medio"
         app:layout_constraintBottom_toTopOf="@+id/btn_hard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_easy" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_hard"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:drawableBottom="@drawable/hard"
+        android:src="@drawable/hard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -37,17 +37,17 @@
         android:ems="10"
         android:hint="Hour"
         android:inputType="time"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/service_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/service_date"/>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/service_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Adress"
+        android:hint="Address"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +62,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"/>
+        app:layout_constraintTop_toBottomOf="@+id/service_address"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

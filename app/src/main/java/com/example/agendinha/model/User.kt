@@ -1,7 +1,5 @@
 package com.example.agendinha.model
 
-import android.provider.ContactsContract.CommonDataKinds.Email
-
 data class User(
    var email: String,
    var password: String,
@@ -12,6 +10,6 @@ data class User(
    var birth: String,
    var cep: String,
    var street: String,
-   var distrit: String,
+   var district: String,
    var state: String
 )
