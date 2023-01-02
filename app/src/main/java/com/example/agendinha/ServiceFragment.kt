@@ -1,13 +1,16 @@
 package com.example.agendinha
 
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 
 
-class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
+class ServiceFragment : Fragment(R.layout.fragment_service) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
 
+    //TODO pegar todas as informacoes aqui e e passar para a tela de perfil
 }

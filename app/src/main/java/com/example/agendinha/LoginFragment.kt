@@ -17,6 +17,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         view.findViewById<Button>(R.id.btn_sign_in).setOnClickListener {
             findNavController().navigate(R.id.actionLogin)
+            //TODO ir para tela de login
         }
     }
 }

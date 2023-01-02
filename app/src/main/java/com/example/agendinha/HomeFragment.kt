@@ -9,5 +9,5 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
-
+    //TODO ir para tela de agendamento e passar o dado do servico
 }
