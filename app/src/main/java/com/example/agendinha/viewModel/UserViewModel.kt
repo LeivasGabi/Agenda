@@ -3,7 +3,7 @@ package com.example.agendinha.viewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.agendinha.Resource.DataSourceUser
+import com.example.agendinha.resource.DataSourceUser
 import com.example.agendinha.model.User
 
 class UserViewModel (private val repositoryMock: DataSourceUser) : ViewModel() {

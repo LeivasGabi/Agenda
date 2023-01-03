@@ -1,4 +1,4 @@
-package com.example.agendinha.Resource
+package com.example.agendinha.resource
 
 import com.example.agendinha.model.Schedule
 

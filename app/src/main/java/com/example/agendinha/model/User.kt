@@ -1,5 +1,7 @@
 package com.example.agendinha.model
 
+import java.io.Serializable
+
 data class User(
    var email: String,
    var password: String,
@@ -12,4 +14,4 @@ data class User(
    var street: String,
    var district: String,
    var state: String
-)
+) : Serializable

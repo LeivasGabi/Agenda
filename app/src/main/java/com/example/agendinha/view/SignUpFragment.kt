@@ -2,9 +2,12 @@ package com.example.agendinha.view
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.agendinha.R
+import com.example.agendinha.model.User
 
 
 class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
@@ -16,18 +19,48 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 
     private fun signUp(view: View) {
 
-        val name: String = view.findViewById<EditText>(R.id.editTextName).text.toString()
-        val email: String = view.findViewById<EditText>(R.id.editTextEmail).text.toString()
-        val password: String = view.findViewById<EditText>(R.id.editTextNewPassword).text.toString()
-        val phone: String = view.findViewById<EditText>(R.id.editTextPhone).text.toString()
-        val birth: String = view.findViewById<EditText>(R.id.editTextBirth).text.toString()
-        val cpf: String = view.findViewById<EditText>(R.id.editTextCPF).text.toString()
-        val rg: String = view.findViewById<EditText>(R.id.editTextRG).text.toString()
-        val cep: String = view.findViewById<EditText>(R.id.editTextCEP).text.toString()
-        val state: String = view.findViewById<EditText>(R.id.editTextState).text.toString()
-        val street: String = view.findViewById<EditText>(R.id.editTextStreet).text.toString()
-        val district: String = view.findViewById<EditText>(R.id.editTextDistrit).text.toString()
+        val email = view.findViewById<EditText>(R.id.editTextEmail)
+        val password = view.findViewById<EditText>(R.id.editTextNewPassword)
+        val name = view.findViewById<EditText>(R.id.editTextName)
+        val phone = view.findViewById<EditText>(R.id.editTextPhone)
+        val cpf = view.findViewById<EditText>(R.id.editTextCPF)
+        val rg = view.findViewById<EditText>(R.id.editTextRG)
+        val birth = view.findViewById<EditText>(R.id.editTextBirth)
+        val cep = view.findViewById<EditText>(R.id.editTextCEP)
+        val street = view.findViewById<EditText>(R.id.editTextStreet)
+        val district = view.findViewById<EditText>(R.id.editTextDistrit)
+        val state  = view.findViewById<EditText>(R.id.editTextState)
 
+        val user = User(
+            email = email.text.toString(),
+            password = password.text.toString(),
+            name = name.text.toString(),
+            phone = phone.text.toString(),
+            cpf = cpf.text.toString(),
+            rg = rg.text.toString(),
+            birth = birth.text.toString(),
+            cep = cep.text.toString(),
+            street = street.text.toString(),
+            district = district.text.toString(),
+            state = state.text.toString()
+        )
+        println(email.text)
+        println(password.text)
+        println(name.text)
+        println(phone.text)
+        println(cpf.text)
+        println(rg.text)
+        println(birth.text)
+        println(cep.text)
+        println(street.text)
+        println(district.text)
+        println(state.text)
 
+        view.findViewById<Button>(R.id.button).setOnClickListener {
+            val action = SignUpFragmentDirections.actionSignUpToPerfil(
+               user
+            )
+            findNavController().navigate(action)
+        }
     }
 }

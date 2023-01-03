@@ -3,14 +3,14 @@ package com.example.agendinha.viewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.agendinha.Resource.DataSourceService
+import com.example.agendinha.resource.DataSourceService
 import com.example.agendinha.model.Schedule
 
 class ServiceViewModel (private val repositoryMock: DataSourceService) : ViewModel() {
     var ServiceLiveData = MutableLiveData<List<Schedule>>()
 
     fun getSchedule(){
-        repositoryMock.getSchedule {  schedules->
+        repositoryMock.getSchedule {  schedules ->
             ServiceLiveData.postValue(schedules)
         }
     }

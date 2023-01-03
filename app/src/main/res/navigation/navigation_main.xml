@@ -32,8 +32,9 @@
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
-            android:id="@+id/actionFirstLogin"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/actionSignUpToPerfil"
+            app:destination="@id/perfilFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/perfilFragment"
@@ -43,6 +44,9 @@
         <action
             android:id="@+id/actionPerfilToHome"
             app:destination="@id/homeFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.agendinha.model.User" />
     </fragment>
     <fragment
         android:id="@+id/serviceFragment"

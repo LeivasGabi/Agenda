@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.agendinha.R
-import com.example.agendinha.Resource.DataSourceUser
+import com.example.agendinha.resource.DataSourceUser
 import com.example.agendinha.viewModel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 

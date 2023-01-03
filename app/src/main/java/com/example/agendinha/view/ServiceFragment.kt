@@ -11,7 +11,6 @@ class ServiceFragment : Fragment(R.layout.fragment_service) {
         super.onViewCreated(view, savedInstanceState)
         typeService()
     }
-
     private fun typeService() {
         TODO("Not yet implemented")
     }
