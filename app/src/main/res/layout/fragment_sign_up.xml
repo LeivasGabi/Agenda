@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpFragment">
+    tools:context=".view.SignUpFragment">
 
 
     <EditText
@@ -14,7 +14,7 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNewPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -29,7 +29,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewPassword"/>
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -53,7 +53,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextCPF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
     <EditText
         android:id="@+id/editTextCPF"
@@ -65,7 +65,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextRG"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBirth" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBirth"/>
 
     <EditText
         android:id="@+id/editTextCEP"
@@ -101,7 +101,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStreet"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextStreet" />
 
     <EditText
         android:id="@+id/editTextRG"
@@ -113,7 +113,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextCEP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCPF"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextCPF" />
 
     <EditText
         android:id="@+id/editTextState"
@@ -125,7 +125,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextStreet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCEP"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextCEP" />
 
     <Button
         android:id="@+id/button"
@@ -135,6 +135,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDistrit"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextDistrit" />
+
+    <EditText
+        android:id="@+id/editTextNewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
