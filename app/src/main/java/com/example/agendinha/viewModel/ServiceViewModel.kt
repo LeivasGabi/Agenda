@@ -9,11 +9,11 @@ import com.example.agendinha.model.Schedule
 class ServiceViewModel (private val repositoryMock: DataSourceService) : ViewModel() {
     var ServiceLiveData = MutableLiveData<List<Schedule>>()
 
-    fun getSchedule(){
-        repositoryMock.getSchedule {  schedules ->
-            ServiceLiveData.postValue(schedules)
-        }
-    }
+//    fun getSchedule(){
+//        repositoryMock.getSchedule {  schedules ->
+//            ServiceLiveData.postValue(schedules)
+//        }
+//    }
 
     class ServiceViewModelFactory(private val repositoryMock: DataSourceService) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {

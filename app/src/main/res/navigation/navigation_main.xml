@@ -23,7 +23,7 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_serviceFragment"
+            android:id="@+id/actionHomeToService"
             app:destination="@id/serviceFragment" />
     </fragment>
     <fragment
@@ -52,5 +52,17 @@
         android:id="@+id/serviceFragment"
         android:name="com.example.agendinha.view.ServiceFragment"
         android:label="fragment_service"
-        tools:layout="@layout/fragment_service" />
+        tools:layout="@layout/fragment_service" >
+        <argument
+            android:name="typeService"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_serviceFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.agendinha.view.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
 </navigation>

@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="E-mail Address"
-        android:text="kaueludovico@outlook.com"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
         app:layout_constraintEnd_toEndOf="parent"

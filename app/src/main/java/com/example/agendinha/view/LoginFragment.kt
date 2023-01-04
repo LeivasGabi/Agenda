@@ -22,6 +22,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         setLogin(view)
     }
 
+    //TODO fazer um if para se caso dados de login estiverem errados aparecer um erro
+
     private fun setLogin(view: View) {
 
         viewModel = ViewModelProvider(this, UserViewModel.UserViewModelFactory(DataSourceUser())).get(UserViewModel::class.java)
