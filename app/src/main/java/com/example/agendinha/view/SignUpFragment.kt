@@ -11,6 +11,7 @@ import com.example.agendinha.model.User
 
 
 class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -44,17 +45,6 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             district = district.text.toString(),
             state = state.text.toString()
         )
-        println(email.text)
-        println(password.text)
-        println(name.text)
-        println(phone.text)
-        println(cpf.text)
-        println(rg.text)
-        println(birth.text)
-        println(cep.text)
-        println(street.text)
-        println(district.text)
-        println(state.text)
 
         view.findViewById<Button>(R.id.button).setOnClickListener {
             val action = SignUpFragmentDirections.actionSignUpToPerfil(
