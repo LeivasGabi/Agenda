@@ -31,10 +31,10 @@
                 app:layout_constraintRight_toRightOf="parent">
 
                 <TextView
-                    android:id="@+id/typeService"
+                    android:id="@+id/typeTask"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Type Service"
+                    android:text="Type Task"
                     android:textColor="#000"
                     android:textSize="19sp" />
 
@@ -55,11 +55,11 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/scheduleAddress"
+                    android:id="@+id/scheduleTaskType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Address"
+                    android:text="Task"
                     android:textSize="15sp" />
 
             </LinearLayout>

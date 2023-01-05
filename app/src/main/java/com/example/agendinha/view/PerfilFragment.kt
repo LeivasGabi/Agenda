@@ -13,8 +13,6 @@ import com.example.agendinha.R
 import com.example.agendinha.resource.DataSourceUser
 import com.example.agendinha.viewModel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_perfil.*
-import kotlinx.android.synthetic.main.fragment_perfil.view.*
-import kotlinx.android.synthetic.main.fragment_sign_up.*
 
 
 class PerfilFragment : Fragment(R.layout.fragment_perfil) {
@@ -25,6 +23,41 @@ class PerfilFragment : Fragment(R.layout.fragment_perfil) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        nextFragment(view)
+        perfilInput(view)
+        //checkData()
+    }
+
+    private fun checkData() {
+        if (args.user?.email == "" && args.user?.password == "") {
+
+        }else{
+            perfilMock()
+        }
+    }
+
+    private fun nextFragment(view: View) {
+
+        view.findViewById<Button>(R.id.btn_next).setOnClickListener {
+            findNavController().navigate(R.id.actionPerfilToHome)
+        }
+    }
+    private fun perfilInput(view: View) {
+
+        view.findViewById<TextView>(R.id.textViewName).text = args.user?.name
+        view.findViewById<TextView>(R.id.textViewRG).text = args.user?.rg
+        view.findViewById<TextView>(R.id.textViewEmail).text = args.user?.email
+        view.findViewById<TextView>(R.id.textViewCPF).text = args.user?.cpf
+        view.findViewById<TextView>(R.id.textViewStreet).text = args.user?.street
+        view.findViewById<TextView>(R.id.textViewCEP).text = args.user?.cep
+        view.findViewById<TextView>(R.id.textViewPhone).text = args.user?.phone
+        view.findViewById<TextView>(R.id.textViewDistrict).text = args.user?.district
+        view.findViewById<TextView>(R.id.textViewState).text = args.user?.state
+        view.findViewById<TextView>(R.id.textViewBirth).text = args.user?.birth
+    }
+
+    private fun perfilMock() {
 
         viewModel = ViewModelProvider(
             this,
@@ -47,22 +80,6 @@ class PerfilFragment : Fragment(R.layout.fragment_perfil) {
 
         })
         viewModel.getUser()
-
-        view.findViewById<Button>(R.id.btn_next).setOnClickListener {
-            findNavController().navigate(R.id.actionPerfilToHome)
-        }
-
-        //TODO fazer um if para dados mockados e dados de entrada funcionarem ao mesmo tempo
-
-//        view.findViewById<TextView>(R.id.textViewName).text = args.user.name
-//        view.findViewById<TextView>(R.id.textViewRG).text = args.user.rg
-//        view.findViewById<TextView>(R.id.textViewEmail).text = args.user.email
-//        view.findViewById<TextView>(R.id.textViewCPF).text = args.user.cpf
-//        view.findViewById<TextView>(R.id.textViewStreet).text = args.user.street
-//        view.findViewById<TextView>(R.id.textViewCEP).text = args.user.cep
-//        view.findViewById<TextView>(R.id.textViewPhone).text = args.user.phone
-//        view.findViewById<TextView>(R.id.textViewDistrict).text = args.user.district
-//        view.findViewById<TextView>(R.id.textViewState).text = args.user.state
-//        view.findViewById<TextView>(R.id.textViewBirth).text = args.user.birth
     }
 }
+

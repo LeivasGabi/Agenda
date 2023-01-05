@@ -17,6 +17,42 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         super.onViewCreated(view, savedInstanceState)
 
         signUp(view)
+        inputIsEmpty()
+    }
+
+    private fun inputIsEmpty() {
+        if(editTextEmail.text.toString() == "")
+            editTextEmail.error = "This field is required"
+
+        if(editTextNewPassword.text.toString() == "")
+            editTextNewPassword.error = "This field is required"
+
+        if(editTextName.text.toString() == "")
+            editTextName.error = "This field is required"
+
+        if(editTextPhone.text.toString() == "")
+            editTextPhone.error = "This field is required"
+
+        if(editTextCPF.text.toString() == "")
+            editTextCPF.error = "This field is required"
+
+        if(editTextRG.text.toString() == "")
+            editTextRG.error = "This field is required"
+
+        if(editTextBirth.text.toString() == "")
+            editTextBirth.error = "This field is required"
+
+        if(editTextCEP.text.toString() == "")
+            editTextCEP.error = "This field is required"
+
+        if(editTextStreet.text.toString() == "")
+            editTextStreet.error = "This field is required"
+
+        if(editTextDistrit.text.toString() == "")
+            editTextDistrit.error = "This field is required"
+
+        if(editTextState.text.toString() == "")
+            editTextState.error = "This field is required"
     }
 
     private fun signUp(view: View) {
@@ -32,41 +68,6 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         val street = view.findViewById<EditText>(R.id.editTextStreet)
         val district = view.findViewById<EditText>(R.id.editTextDistrit)
         val state  = view.findViewById<EditText>(R.id.editTextState)
-
-        //TODO validar se campos estao vazios
-
-        if(editTextEmail.length() == 0)
-            editTextEmail.error = "This field is required"
-
-        if(editTextNewPassword.length() == 0)
-            editTextNewPassword.error = "This field is required"
-
-        if(editTextName.length() == 0)
-            editTextName.error = "This field is required"
-
-        if(editTextPhone.length() == 0)
-            editTextPhone.error = "This field is required"
-
-        if(editTextCPF.length() == 0)
-            editTextCPF.error = "This field is required"
-
-        if(editTextRG.length() == 0)
-            editTextRG.error = "This field is required"
-
-        if(editTextBirth.length() == 0)
-            editTextBirth.error = "This field is required"
-
-        if(editTextCEP.length() == 0)
-            editTextCEP.error = "This field is required"
-
-        if(editTextStreet.length() == 0)
-            editTextStreet.error = "This field is required"
-
-        if(editTextDistrit.length() == 0)
-            editTextDistrit.error = "This field is required"
-
-        if(editTextState.length() == 0)
-            editTextState.error = "This field is required"
 
         val user = User(
             email = email.text.toString(),

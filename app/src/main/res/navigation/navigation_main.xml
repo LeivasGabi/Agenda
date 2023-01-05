@@ -46,23 +46,28 @@
             app:destination="@id/homeFragment" />
         <argument
             android:name="user"
-            app:argType="com.example.agendinha.model.User" />
+            app:argType="com.example.agendinha.model.User"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/serviceFragment"
-        android:name="com.example.agendinha.view.ServiceFragment"
+        android:name="com.example.agendinha.view.TaskFragment"
         android:label="fragment_service"
         tools:layout="@layout/fragment_task" >
         <argument
             android:name="typeService"
-            app:argType="string" />
+            app:argType="integer" />
         <action
-            android:id="@+id/action_serviceFragment_to_listFragment"
+            android:id="@+id/actionListSchedules"
             app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.agendinha.view.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <argument
+            android:name="schedule"
+            app:argType="com.example.agendinha.model.Schedule" />
+    </fragment>
 </navigation>
