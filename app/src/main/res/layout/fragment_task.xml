@@ -4,55 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ServiceFragment">
+    tools:context=".view.TaskFragment">
 
     <TextView
-        android:id="@+id/typeService"
+        android:id="@+id/textViewTypeTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Type"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/serviceDate"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTaskDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/serviceDate"
+        android:id="@+id/editTextTaskDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Date"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/serviceHour"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTaskHour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeService" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTypeTask" />
 
     <EditText
-        android:id="@+id/serviceHour"
+        android:id="@+id/editTextTaskHour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Hour"
         android:inputType="time"
-        app:layout_constraintBottom_toTopOf="@+id/serviceAddress"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTask"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serviceDate"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskDate"/>
 
     <EditText
-        android:id="@+id/serviceAddress"
+        android:id="@+id/editTextTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Address"
+        android:hint="Task"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serviceHour" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskHour" />
 
     <Button
         android:id="@+id/button2"
@@ -62,6 +62,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serviceAddress"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextTask"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,7 +52,7 @@
         android:id="@+id/serviceFragment"
         android:name="com.example.agendinha.view.ServiceFragment"
         android:label="fragment_service"
-        tools:layout="@layout/fragment_service" >
+        tools:layout="@layout/fragment_task" >
         <argument
             android:name="typeService"
             app:argType="string" />
