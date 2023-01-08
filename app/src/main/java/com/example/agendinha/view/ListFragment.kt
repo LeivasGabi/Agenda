@@ -24,7 +24,7 @@ class ListFragment : AppCompatActivity() {
     }
 
     private fun populateItems() {
-        adapter.setDataSet(listDataSet(args.taskArgs))
+        adapter.setDataSet(listDataSet(args.schedule))
     }
 
     private fun listDataSet(schedule: Schedule) : List<Schedule>{

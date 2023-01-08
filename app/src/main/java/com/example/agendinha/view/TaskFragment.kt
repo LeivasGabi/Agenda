@@ -19,9 +19,6 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //TODO salvar a o servico e mostrar na recyclerview
-        //TODO dialog para salvo com sucesso
-
         when(args.typeService) {
             1 ->
                 textViewTypeTask.text = "Easy"
