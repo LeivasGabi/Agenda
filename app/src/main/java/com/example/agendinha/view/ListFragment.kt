@@ -24,9 +24,6 @@ class ListFragment : AppCompatActivity() {
         populateRecycler()
     }
 
-    private fun initAdapter() {
-        listAdapter = Adapter()
-
         recyclerView.apply {
             RecyclerView.LayoutManager = LinearLayoutManager(ContentProviderCompat.requireContext())
             adapter = listAdapter

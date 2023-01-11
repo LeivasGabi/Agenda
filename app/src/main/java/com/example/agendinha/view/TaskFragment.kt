@@ -19,7 +19,6 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         when(args.typeService) {
             1 ->
                 textViewTypeTask.text = "Easy"
