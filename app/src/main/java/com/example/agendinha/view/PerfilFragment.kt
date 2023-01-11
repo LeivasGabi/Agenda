@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.agendinha.R
-import com.example.agendinha.resource.DataSourceUser
 import com.example.agendinha.viewModel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_perfil.*
 
@@ -26,15 +25,6 @@ class PerfilFragment : Fragment(R.layout.fragment_perfil) {
 
         nextFragment(view)
         perfilInput(view)
-        //checkData()
-    }
-
-    private fun checkData() {
-        if (args.user?.email == "" && args.user?.password == "") {
-
-        }else{
-            perfilMock()
-        }
     }
 
     private fun nextFragment(view: View) {
@@ -47,39 +37,8 @@ class PerfilFragment : Fragment(R.layout.fragment_perfil) {
 
         view.findViewById<TextView>(R.id.textViewName).text = args.user?.name
         view.findViewById<TextView>(R.id.textViewRG).text = args.user?.rg
-        view.findViewById<TextView>(R.id.textViewEmail).text = args.user?.email
         view.findViewById<TextView>(R.id.textViewCPF).text = args.user?.cpf
-        view.findViewById<TextView>(R.id.textViewStreet).text = args.user?.street
-        view.findViewById<TextView>(R.id.textViewCEP).text = args.user?.cep
-        view.findViewById<TextView>(R.id.textViewPhone).text = args.user?.phone
-        view.findViewById<TextView>(R.id.textViewDistrict).text = args.user?.district
-        view.findViewById<TextView>(R.id.textViewState).text = args.user?.state
         view.findViewById<TextView>(R.id.textViewBirth).text = args.user?.birth
-    }
-
-    private fun perfilMock() {
-
-        viewModel = ViewModelProvider(
-            this,
-            UserViewModel.UserViewModelFactory(
-                DataSourceUser()
-            )
-        ).get(UserViewModel::class.java)
-
-        viewModel.userLiveData.observe(viewLifecycleOwner, Observer { users ->
-            textViewEmail.text = users.email
-            textViewName.text = users.name
-            textViewPhone.text = users.phone
-            textViewCPF.text = users.cpf
-            textViewRG.text = users.rg
-            textViewBirth.text = users.birth
-            textViewCEP.text = users.cep
-            textViewStreet.text = users.street
-            textViewDistrict.text = users.district
-            textViewState.text = users.state
-
-        })
-        viewModel.getUser()
     }
 }
 

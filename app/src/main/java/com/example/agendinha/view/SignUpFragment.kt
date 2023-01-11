@@ -69,25 +69,25 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         val district = view.findViewById<EditText>(R.id.editTextDistrit)
         val state  = view.findViewById<EditText>(R.id.editTextState)
 
-        val user = User(
-            email = email.text.toString(),
-            password = password.text.toString(),
-            name = name.text.toString(),
-            phone = phone.text.toString(),
-            cpf = cpf.text.toString(),
-            rg = rg.text.toString(),
-            birth = birth.text.toString(),
-            cep = cep.text.toString(),
-            street = street.text.toString(),
-            district = district.text.toString(),
-            state = state.text.toString()
-        )
+//        val user = User(
+//            email = email.text.toString(),
+//            password = password.text.toString(),
+//            name = name.text.toString(),
+//            phone = phone.text.toString(),
+//            cpf = cpf.text.toString(),
+//            rg = rg.text.toString(),
+//            birth = birth.text.toString(),
+//            cep = cep.text.toString(),
+//            street = street.text.toString(),
+//            district = district.text.toString(),
+//            state = state.text.toString()
+//        )
 
-        view.findViewById<Button>(R.id.button).setOnClickListener {
-            val action = SignUpFragmentDirections.actionSignUpToPerfil(
-               user
-            )
-            findNavController().navigate(action)
-        }
+//        view.findViewById<Button>(R.id.button).setOnClickListener {
+//            val action = SignUpFragmentDirections.actionSignUpToPerfil(
+//               user
+//            )
+//            findNavController().navigate(action)
+       // }
     }
 }

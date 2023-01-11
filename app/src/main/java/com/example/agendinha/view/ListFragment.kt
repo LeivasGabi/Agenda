@@ -1,42 +1,41 @@
 package com.example.agendinha.view
 
-import android.os.Bundle
+import android.content.Context
+import android.util.AttributeSet
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat
 import androidx.navigation.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.agendinha.R
+import androidx.recyclerview.widget.RecyclerView
 import com.example.agendinha.adapter.Adapter
-import com.example.agendinha.model.Schedule
+import com.example.agendinha.resource.DataSourceSchedule
 import kotlinx.android.synthetic.main.fragment_list.*
+
 
 class ListFragment : AppCompatActivity() {
 
-    private val args : ListFragmentArgs by navArgs()
+    private lateinit var listAdapter: Adapter
+    private val args: ListFragmentArgs by navArgs()
 
-    private lateinit var adapter: Adapter
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
+        return super.onCreateView(name, context, attrs)
         initAdapter()
-        populateItems()
-    }
-
-    private fun populateItems() {
-        adapter.setDataSet(listDataSet(args.taskArgs))
-    }
-
-    private fun listDataSet(schedule: Schedule) : List<Schedule>{
-        return listOf(schedule)
+        populateRecycler()
     }
 
     private fun initAdapter() {
-        adapter = Adapter { schedule ->
-        }
+        listAdapter = Adapter()
 
-        recyclerView.layoutManager = LinearLayoutManager(this@ListFragment)
-        recyclerView.adapter = adapter
+        recyclerView.apply {
+            RecyclerView.LayoutManager = LinearLayoutManager(ContentProviderCompat.requireContext())
+            adapter = listAdapter
+        }
     }
 
+    private fun populateRecycler() {
+        DataSourceSchedule.createSchedule(args.schedule) {
+            listAdapter.setDataSet(it)
+        }
+    }
 }

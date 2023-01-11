@@ -6,157 +6,204 @@
     android:layout_height="match_parent"
     tools:context=".view.SignUpFragment">
 
+    <TextView
+        android:id="@+id/textViewDadosPessoais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Dados Pessoais"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="370dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Name"
-        android:text="Kauê"
+        android:hint="Nome"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNewPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="E-mail Address"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNewPassword"/>
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:text="51 98998-6556"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/editTextBirth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewDadosPessoais"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDadosPessoais" />
 
     <EditText
         android:id="@+id/editTextBirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="257dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Birth"
-        android:text="24/05/2000"
+        android:hint="Data de Nascimento"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCPF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <Button
+        android:id="@+id/buttonCalendar"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Calendario"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextBirth"
+        app:layout_constraintTop_toTopOf="@+id/editTextBirth" />
 
     <EditText
-        android:id="@+id/editTextCPF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="CPF"
-        android:text="123.456.789-00"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/editTextRG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBirth"/>
-
-    <EditText
-        android:id="@+id/editTextCEP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="CEP"
-        android:text="90035-050"
-        android:inputType="textPostalAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editTextState"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRG"/>
-
-    <EditText
-        android:id="@+id/editTextStreet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Street"
-        android:text="Garibaldi"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDistrit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextState"/>
-
-    <EditText
-        android:id="@+id/editTextDistrit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="District"
-        android:text="Bom Fim"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStreet" />
-
-    <EditText
-        android:id="@+id/editTextRG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/editTextRg"
+        android:layout_width="179dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="RG"
-        android:inputType="number"
-        android:text="12.123.123-12"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCEP"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCPF" />
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@id/editTextCpf"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/editTextBirth"
+        app:layout_constraintTop_toBottomOf="@id/editTextBirth" />
+
+    <EditText
+        android:id="@+id/editTextCpf"
+        android:layout_width="181dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalendar"
+        app:layout_constraintStart_toEndOf="@id/editTextRg"
+        app:layout_constraintTop_toTopOf="@+id/editTextRg" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="370dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Rua"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCpf"
+        app:layout_constraintStart_toStartOf="@+id/editTextRg"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRg" />
+
+    <EditText
+        android:id="@+id/editTextDistrict"
+        android:layout_width="269dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Bairro"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Número"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalendar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextDistrict"
+        app:layout_constraintTop_toTopOf="@+id/editTextDistrict" />
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Cidade"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextDistrict"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDistrict" />
 
     <EditText
         android:id="@+id/editTextState"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="46dp"
         android:ems="10"
-        android:hint="State"
-        android:text="RS"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextStreet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCEP" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDistrit" />
+        android:hint="UF"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextCity"
+        app:layout_constraintTop_toTopOf="@+id/editTextCity" />
 
     <EditText
-        android:id="@+id/editTextNewPassword"
+        android:id="@+id/editTextCountry"
+        android:layout_width="370dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="País"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextState"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextCity"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
+
+    <TextView
+        android:id="@+id/textViewDataLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Dados de Login"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextCountry"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCountry" />
+
+    <EditText
+        android:id="@+id/editTextEmailRegister"
+        android:layout_width="370dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Password"
-        android:text="1234"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        android:hint="E-mail"
+        android:text="123"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/editTextState"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewDataLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataLogin" />
+
+    <EditText
+        android:id="@+id/editTextPasswordRegister"
+        android:layout_width="370dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:text="123"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmailRegister"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailRegister" />
+
+    <Button
+        android:id="@+id/buttonRegisterAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cadastrar"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordRegister"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordRegister" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,35 +31,27 @@
                 app:layout_constraintRight_toRightOf="parent">
 
                 <TextView
-                    android:id="@+id/typeTask"
+                    android:id="@+id/textViewTypeService"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Type Task"
+                    android:text="Tipo de Serviço"
                     android:textColor="#000"
                     android:textSize="19sp" />
 
                 <TextView
-                    android:id="@+id/scheduleHour"
+                    android:id="@+id/textViewDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Hour"
-                    android:textSize="15sp" />
+                    android:text="Data"
+                    android:textColor="#000"
+                    android:textSize="19sp" />
 
                 <TextView
-                    android:id="@+id/ScheduleDate"
+                    android:id="@+id/textViewAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Date"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/scheduleTaskType"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Task"
+                    android:text="Endereço"
                     android:textSize="15sp" />
 
             </LinearLayout>

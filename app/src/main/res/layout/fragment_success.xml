@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SuccessFragment">
+
+    <ImageView
+        android:id="@+id/imageViewSucess"
+        android:layout_width="201dp"
+        android:layout_height="198dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSuccess"
+        android:layout_width="341dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="55dp"
+        android:text="Agendamento realizado com sucesso!"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewSucess"
+        app:layout_constraintStart_toStartOf="@+id/imageViewSucess"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSucess" />
+
+    <TextView
+        android:id="@+id/textViewDescSuccess"
+        android:layout_width="311dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="36dp"
+        android:text="Endereço"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSuccess"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/textViewSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSuccess" />
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDescSuccess"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescSuccess" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

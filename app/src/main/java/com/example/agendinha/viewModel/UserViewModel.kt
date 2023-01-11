@@ -1,24 +1,28 @@
 package com.example.agendinha.viewModel
 
-import androidx.lifecycle.MutableLiveData
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.agendinha.resource.DataSourceUser
 import com.example.agendinha.model.User
+import com.example.agendinha.view.LoginFragment
+import kotlinx.android.synthetic.main.fragment_login.*
 
-class UserViewModel (private val repositoryMock: DataSourceUser) : ViewModel() {
+class UserViewModel(val fragment: LoginFragment): ViewModel() {
 
-    var userLiveData = MutableLiveData<User>()
-
-    fun getUser(){
-        repositoryMock.getUser { users ->
-            userLiveData.postValue(users)
+    fun validateLogin(user: User, callback: (result: (Boolean)) -> Unit) {
+        if (user.login.email != fragment.editTextEmailLogin.text.toString() ||
+            user.login.password != fragment.editTextPassword.text.toString()) {
+            callback.invoke(false)
+        } else {
+            callback.invoke(true)
         }
     }
 
-    class UserViewModelFactory(private val repositoryMock: DataSourceUser) : ViewModelProvider.Factory {
+    class LoginViewModelProvider(
+        val fragment: LoginFragment
+    ): ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            return UserViewModel(repositoryMock) as T
+            return UserViewModel(fragment) as T
         }
     }
 }

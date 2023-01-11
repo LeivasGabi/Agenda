@@ -3,59 +3,57 @@ package com.example.agendinha.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.agendinha.R
 import androidx.recyclerview.widget.RecyclerView
+import com.example.agendinha.R
+import com.example.agendinha.model.Address
 import com.example.agendinha.model.Schedule
 import kotlinx.android.synthetic.main.res_layout.view.*
 
-class Adapter (private val onClicked: (Schedule) -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class Adapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private lateinit var items: List<Schedule>
+    private lateinit var listService: List<Schedule>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ScheduleViewHolder(
-
-            LayoutInflater.from(parent.context).inflate(R.layout.fragment_list, parent, false)
+        return ListServiceViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.res_layout, parent, false)
         )
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder) {
-            is ScheduleViewHolder -> {
-                holder.bind(items[position], onClicked)
+        when(holder) {
+            is ListServiceViewHolder -> {
+                holder.bind(listService[position])
             }
         }
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return listService.size
     }
 
-    fun setDataSet(list: List<Schedule> ){
-        this.items = list
+    fun setDataSet(list: List<Schedule>) {
+        listService = list
     }
 
-    class ScheduleViewHolder constructor(
-        ItemView: View
-    ): RecyclerView.ViewHolder(ItemView) {
+    class ListServiceViewHolder constructor(
+        itemView: View
+    ) : RecyclerView.ViewHolder(itemView) {
+        private val typeService = itemView.textViewTypeService
+        private val dateService = itemView.textViewDate
+        private val addressService = itemView.textViewAddress
 
-        private val scheduleType = itemView.typeTask
-        private val scheduleHour = itemView.scheduleHour
-        private val scheduleDate = itemView.ScheduleDate
-        private val scheduleTask = itemView.scheduleTaskType
-
-
-        fun bind(schedule: Schedule, onClicked: (Schedule) -> Unit){
-            scheduleType.text = schedule.type
-            scheduleHour.text = schedule.hour
-            scheduleDate.text = schedule.date
-            scheduleTask.text = schedule.task
-
-            itemView.setOnClickListener{
-                onClicked(schedule)
-            }
+        fun bind(schedule: Schedule) {
+            typeService.text = schedule.type
+            dateService.text = schedule.date
+            addressService.text = concatenate(schedule.address)
+        }
+        fun concatenate(address: Address) : String {
+            return "${address.street}," +
+                    "${address.number} - " +
+                    "${address.district}, " +
+                    "${address.city} - " +
+                    "${address.state} / "
         }
     }
 }
-
 
