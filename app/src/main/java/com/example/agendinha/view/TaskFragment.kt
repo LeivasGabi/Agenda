@@ -40,12 +40,12 @@ class TaskFragment : Fragment(R.layout.fragment_task) {
             task = task.text.toString()
         )
 
-        view.findViewById<Button>(R.id.btn_save).setOnClickListener {
-            val action = TaskFragmentDirections.actionListSchedules(
-                schudule
-            )
-            findNavController().navigate(action)
-        }
+//        view.findViewById<Button>(R.id.btn_save).setOnClickListener {
+//            val action = TaskFragmentDirections.actionListSchedules(
+//                schudule
+//            )
+//            findNavController().navigate(action)
+//        }
     }
 }
 

@@ -20,19 +20,19 @@ class ListFragment : AppCompatActivity() {
 
     override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
         return super.onCreateView(name, context, attrs)
-        initAdapter()
-        populateRecycler()
+        //initAdapter()
+       // populateRecycler()
     }
 
-        recyclerView.apply {
-            RecyclerView.LayoutManager = LinearLayoutManager(ContentProviderCompat.requireContext())
-            adapter = listAdapter
-        }
+//      populateRecycler  recyclerView.apply {
+//            RecyclerView.LayoutManager = LinearLayoutManager(ContentProviderCompat.requireContext())
+//            adapter = listAdapter
+//        }
     }
 
-    private fun populateRecycler() {
-        DataSourceSchedule.createSchedule(args.schedule) {
-            listAdapter.setDataSet(it)
-        }
-    }
-}
+//    private fun populateRecycler() {
+//        DataSourceSchedule.createSchedule(args.schedule) {
+//            listAdapter.setDataSet(it)
+//        }
+//    }
+//}
